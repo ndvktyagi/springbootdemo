@@ -1,0 +1,6 @@
+com\springbootdemo\entity\SpringBoot.class
+com\springbootdemo\Main.class
+com\springbootdemo\controller\SpringBootController.class
+com\springbootdemo\entity\Student.class
+com\springbootdemo\dao\SpringBootDao.class
+com\springbootdemo\service\SpringBootService.class

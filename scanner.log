@@ -1,0 +1,101 @@
+E:\Users\amitk.kmr\Downloads\sonar-scanner-2.8\sonar-scanner-2.8\bin\..
+INFO: Scanner configuration file: E:\Users\amitk.kmr\Downloads\sonar-scanner-2.8\sonar-scanner-2.8\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: E:\Users\amitk.kmr\workspace\springbootdemo\sonar-project.properties
+INFO: SonarQube Scanner 2.8
+INFO: Java 1.8.0_91 Oracle Corporation (64-bit)
+INFO: Windows 8.1 6.3 amd64
+INFO: User cache: E:\Users\amitk.kmr\.sonar\cache
+INFO: Load global repositories
+INFO: Load global repositories (done) | time=186ms
+INFO: User cache: E:\Users\amitk.kmr\.sonar\cache
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=30ms
+INFO: SonarQube server 6.2
+INFO: Default locale: "en_IN", source code encoding: "windows-1252" (analysis is platform dependent)
+INFO: Process project properties
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=146ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=28ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=434ms
+INFO: Publish mode
+INFO: -------------  Scan springbootdemo
+INFO: Language is forced to java
+INFO: Load server rules
+INFO: Load server rules (done) | time=139ms
+INFO: Initializer GenericCoverageSensor
+INFO: Initializer GenericCoverageSensor (done) | time=1ms
+INFO: Base dir: E:\Users\amitk.kmr\workspace\springbootdemo
+INFO: Working dir: E:\Users\amitk.kmr\workspace\springbootdemo\target\sonar
+INFO: Source paths: src/main/java/com
+INFO: Test paths: src/test/java/com
+INFO: Source encoding: windows-1252, default locale: en_IN
+INFO: Index files
+INFO: 6 files indexed
+INFO: Quality profile for java: Sonar way
+INFO: Sensor Lines Sensor
+INFO: Sensor Lines Sensor (done) | time=15ms
+INFO: Sensor JavaSquidSensor
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+INFO: JavaClasspath initialization (done) | time=39ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=3ms
+INFO: Java Main Files AST scan
+INFO: 5 source files to be analyzed
+INFO: Java Main Files AST scan (done) | time=1621ms
+INFO: Java Test Files AST scan
+INFO: 1 source files to be analyzed
+INFO: 5/5 source files have been analyzed
+INFO: 1/1 source files have been analyzed
+INFO: Java Test Files AST scan (done) | time=124ms
+INFO: Sensor JavaSquidSensor (done) | time=3254ms
+INFO: Sensor SCM Sensor
+INFO: No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+INFO: Sensor SCM Sensor (done) | time=1ms
+INFO: Sensor Coverage Report Import
+INFO: Sensor Coverage Report Import (done) | time=0ms
+INFO: Sensor Coverage Report Import
+INFO: Sensor Coverage Report Import (done) | time=0ms
+INFO: Sensor Unit Test Results Import
+INFO: Sensor Unit Test Results Import (done) | time=1ms
+INFO: Sensor SurefireSensor
+INFO: parsing E:\Users\amitk.kmr\workspace\springbootdemo\target\surefire-reports
+INFO: Sensor SurefireSensor (done) | time=136ms
+INFO: Sensor JaCoCoSensor
+INFO: Analysing E:\Users\amitk.kmr\workspace\springbootdemo\target\jacoco.exec
+INFO: No information about coverage per test.
+INFO: Sensor JaCoCoSensor (done) | time=320ms
+INFO: Sensor JaCoCoItSensor
+INFO: JaCoCoItSensor: JaCoCo IT report not found: E:\Users\amitk.kmr\workspace\springbootdemo\target\jacoco-it.exec
+INFO: Sensor JaCoCoItSensor (done) | time=0ms
+INFO: Sensor JaCoCoOverallSensor
+INFO: Analysing E:\Users\amitk.kmr\workspace\springbootdemo\target\jacoco.exec
+INFO: Analysing E:\Users\amitk.kmr\workspace\springbootdemo\target\sonar\jacoco-overall.exec
+INFO: No information about coverage per test.
+INFO: Sensor JaCoCoOverallSensor (done) | time=105ms
+INFO: Sensor XmlFileSensor
+INFO: Sensor XmlFileSensor (done) | time=0ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=45ms
+INFO: Sensor Code Colorizer Sensor
+INFO: Sensor Code Colorizer Sensor (done) | time=1ms
+INFO: Sensor CPD Block Indexer
+INFO: JavaCpdBlockIndexer is used for java
+INFO: Sensor CPD Block Indexer (done) | time=109ms
+INFO: Calculating CPD for 1 files
+INFO: CPD calculation finished
+INFO: Analysis report generated in 398ms, dir size=20 KB
+INFO: Analysis reports compressed in 146ms, zip size=15 KB
+INFO: Analysis report uploaded in 73ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard/index/springbootdemo
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://localhost:9000/api/ce/task?id=AVm8USV1LMeSiXebJh1E
+INFO: Task total time: 13.346 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 16.547s
+INFO: Final Memory: 48M/270M
+INFO: ------------------------------------------------------------------------

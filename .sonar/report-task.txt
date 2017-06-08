@@ -1,0 +1,5 @@
+projectKey=springbootdemo
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/springbootdemo
+ceTaskId=AVm8M3UILMeSiXebJh09
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVm8M3UILMeSiXebJh09

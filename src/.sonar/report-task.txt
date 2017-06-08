@@ -1,0 +1,5 @@
+projectKey=SpringBoot1
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/SpringBoot1
+ceTaskId=AVmyfFUJxdndiV_MlJGo
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVmyfFUJxdndiV_MlJGo
