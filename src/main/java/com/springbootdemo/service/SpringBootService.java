@@ -19,7 +19,7 @@ public class SpringBootService {
 
 	public String getHelloWorldMsg(){
 
-		return "Hello World";
+		return "Hello World Testing Spring Boot Demo";
 	}
 
 	public Student  save(Student student){
