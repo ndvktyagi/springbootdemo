@@ -4,7 +4,7 @@
 	<groupId>com.springboot</groupId>
 	<artifactId>springbootdemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>SpringBoot</name>
 	<description>Spring Boot</description>
 	<parent>
