@@ -127,10 +127,10 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.5.201505241946</version>
 				<configuration>
-    <forkCount>3</forkCount>
-    <reuseForks>true</reuseForks>
-    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-  </configuration>
+				    <forkCount>3</forkCount>
+				    <reuseForks>true</reuseForks>
+				    <argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
+				</configuration>
 				<executions>
 					<execution>
 						<id>default-prepare-agent</id>
