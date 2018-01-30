@@ -241,23 +241,26 @@
 					<argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
 				</configuration>
 			</plugin>
-			 <plugin>
-            <groupId>com.spotify</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <version>0.2.3</version>
-            <configuration>
-                <imageName>springbootdemo/${project.artifactId}</imageName>
-                <dockerDirectory>src/main/resources</dockerDirectory>
-                <dockerHost>https://localhost:8080</dockerHost>
-                <resources>
-                    <resource>
-                        <targetPath>/</targetPath>
-                        <directory>${project.build.directory}</directory>
-                        <include>${project.build.finalName}.jar</include>
-                    </resource>
-                </resources>
-            </configuration>
-        </plugin>
+			<plugin>
+				 <groupId>com.springboot</groupId>
+           		 <artifactId>docker-maven-plugin</artifactId>
+				<version>0.15.3</version>
+				<configuration>
+					<dockerHost>http://127.0.0.1:2375</dockerHost>
+					<verbose>true</verbose>
+					<images>
+						<image>
+							<name>springbootdemo/${project.artifactId}</name>
+							<build>
+								<dockerFile>Dockerfile</dockerFile>
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+							</build>
+						</image>
+					</images>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
