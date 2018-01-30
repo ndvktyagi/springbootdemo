@@ -242,13 +242,13 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				 <groupId>com.springboot</groupId>
-           		 <artifactId>docker-maven-plugin</artifactId>
-				<version>0.15.3</version>
-				<configuration>
-					<dockerHost>http://127.0.0.1:2375</dockerHost>
-					<verbose>true</verbose>
-					<images>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.2.3</version>
+            <configuration>
+            	<dockerHost>http://127.0.0.1:2375</dockerHost>
+                <dockerDirectory>src/main/resources</dockerDirectory>
+               <images>
 						<image>
 							<name>springbootdemo/${project.artifactId}</name>
 							<build>
@@ -259,8 +259,8 @@
 							</build>
 						</image>
 					</images>
-				</configuration>
-			</plugin>
+            </configuration>
+      	  </plugin>
 		</plugins>
 	</build>
 
