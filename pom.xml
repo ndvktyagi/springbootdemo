@@ -248,6 +248,7 @@
             <configuration>
                 <imageName>springbootdemo/${project.artifactId}</imageName>
                 <dockerDirectory>src/main/resources</dockerDirectory>
+                <dockerHost>https://localhost:8080</dockerHost>
                 <resources>
                     <resource>
                         <targetPath>/</targetPath>
