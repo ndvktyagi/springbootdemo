@@ -29,7 +29,7 @@ public class SpringBootServiceTest {
             throws Exception {
         String greeting = this.controller.getHelloWorldMsg();
         System.out.println(greeting);
-        assert(greeting).equals("Hello World Testing Changes");
+        assert(greeting).equals("Hello World");
         greeting = this.controller.getSpringBootMsg();
         System.out.println(greeting);
         assert(greeting).equals("Hello Spring Boot Demo 1");

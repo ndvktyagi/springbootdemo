@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.springboot</groupId>
-	<artifactId>springbootdemo</artifactId>
+	<artifactId>SpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>SpringBoot</name>
@@ -11,9 +11,61 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.1.RELEASE</version>
-	</parent>
 
+	</parent>
+	<repositories>
+        <repository>
+            <id>snapshots-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 	<dependencies>
+		<dependency>
+			  <groupId>edu.cmu.sphinx</groupId>
+			 <artifactId>sphinx4-core</artifactId>
+			 <version>5prealpha-SNAPSHOT</version>
+		 </dependency>
+		 
+		 <dependency>
+		  <groupId>edu.cmu.sphinx</groupId>
+		  <artifactId>sphinx4-data</artifactId>
+		  <version>5prealpha-SNAPSHOT</version>
+		</dependency>
+			<!-- https://mvnrepository.com/artifact/org.mobicents.external.freetts/cmu_time_awb -->
+		<dependency>
+			<groupId>org.mobicents.external.freetts</groupId>
+			<artifactId>cmu_time_awb</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mobicents.external.freetts/cmu_us_kal -->
+		<dependency>
+			<groupId>org.mobicents.external.freetts</groupId>
+			<artifactId>cmu_us_kal</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mobicents.external.freetts/cmulex -->
+		<dependency>
+			<groupId>org.mobicents.external.freetts</groupId>
+			<artifactId>cmulex</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mobicents.external.freetts</groupId>
+			<artifactId>freetts</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mobicents.external.freetts</groupId>
+			<artifactId>en_us</artifactId>
+			<version>1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
@@ -109,6 +161,36 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>8.0.36</version>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>4.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Optional, for bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+
 	</dependencies>
 
 	<properties>
@@ -159,6 +241,22 @@
 					<argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
 				</configuration>
 			</plugin>
+			 <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.2.3</version>
+            <configuration>
+                <imageName>springbootdemo/${project.artifactId}</imageName>
+                <dockerDirectory>src/main/resources</dockerDirectory>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>${project.build.finalName}.jar</include>
+                    </resource>
+                </resources>
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 

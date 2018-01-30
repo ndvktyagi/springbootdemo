@@ -15,7 +15,7 @@ public class Student {
 	
 	private String name;
 	
-	private String className;
+	private String classname;
 
 	public String getName() {
 		return name;
@@ -25,12 +25,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public String getClassName() {
-		return className;
+	public String getClassname() {
+		return classname;
 	}
 
-	public void setClassName(String className) {
-		this.className = className;
+	public void setClassname(String classname) {
+		this.classname = classname;
 	}
 	
 

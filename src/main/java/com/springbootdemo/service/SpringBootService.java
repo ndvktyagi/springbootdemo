@@ -14,16 +14,19 @@ public class SpringBootService {
 
 	public String getSpringBootMsg(){
 
-		return springBootDao.getSprintBootMsg();
+		return "Hello Spring Boot Demo 1";
 	}
 
 	public String getHelloWorldMsg(){
 
-		return "Hello World Testing Changes";
+		return "Hello World";
 	}
 
 	public Student  save(Student student){
 		return springBootDao.save(student);
 	}
 
+	public Iterable<Student>  findAll(){
+		return springBootDao.findAll();
+	}
 }

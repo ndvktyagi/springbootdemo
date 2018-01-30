@@ -31,6 +31,11 @@ public class SpringBootController {
 		return springBootService.getHelloWorldMsg();
 	}
 	
+	@RequestMapping(value="/findAll",method=RequestMethod.GET)
+	public Iterable<Student> findAll(){
+		
+		return springBootService.findAll();
+	}
 	
 	@RequestMapping(value="/addStudent",method=RequestMethod.POST)
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student){
