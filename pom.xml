@@ -248,17 +248,13 @@
             <configuration>
             	<dockerHost>http://127.0.0.1:2375</dockerHost>
                 <dockerDirectory>src/main/resources</dockerDirectory>
-               <images>
-						<image>
-							<name>springbootdemo/${project.artifactId}</name>
-							<build>
-								<dockerFile>Dockerfile</dockerFile>
-								<assembly>
-									<descriptorRef>artifact</descriptorRef>
-								</assembly>
-							</build>
-						</image>
-					</images>
+              <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>${project.build.finalName}.jar</include>
+                    </resource>
+                </resources>
             </configuration>
       	  </plugin>
 		</plugins>
