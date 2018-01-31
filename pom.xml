@@ -250,7 +250,7 @@
 					<verbose>true</verbose>
 					<images>
 						<image>
-							<name>springbootdemo/SpringBoot</name>
+							<name>springboot</name>
 							<build>
 								<dockerFile>Dockerfile</dockerFile>
 								<assembly>
