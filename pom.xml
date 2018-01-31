@@ -247,6 +247,7 @@
 				<version>0.15.3</version>
 				<configuration>
 					<dockerHost>http://127.0.0.1:2375</dockerHost>
+					<dockerDirectory>src/main/resources</dockerDirectory>
 					<verbose>true</verbose>
 					<images>
 						<image>
