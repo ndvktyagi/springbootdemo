@@ -3,7 +3,7 @@ ENV JAVA_VERSION 8u31
 ENV BUILD_VERSION b13
 # Upgrading system
 RUN apt-get -y upgrade
-RUN apt-get -y install wget
+#RUN apt-get -y install wget
 # Downloading & Config Java 8
 RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-$BUILD_VERSION/jdk-$JAVA_VERSION-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm
 RUN apt-get -y install /tmp/jdk-8-linux-x64.rpm
