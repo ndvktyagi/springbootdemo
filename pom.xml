@@ -247,6 +247,8 @@
             <version>0.2.3</version>
             <configuration>
             	<dockerHost>http://127.0.0.1:2375</dockerHost>
+            	<imageName>${project.artifactId}</imageName>
+            	
                 <dockerDirectory>src/main/resources</dockerDirectory>
               <resources>
                     <resource>
