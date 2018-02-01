@@ -10,7 +10,13 @@ RUN apt-get -y upgrade
 #RUN alternatives --install /usr/bin/java jar /usr/java/latest/bin/java 200000
 #RUN alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
 #RUN alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
-RUN sudo apt-get install -y openjdk-8-jdk
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository -y ppa:webupd8team/java
+RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
+RUN apt-get update
+RUN apt-get -y install oracle-java8-installer
+
 EXPOSE 8080
 #install Spring Boot artifact
 VOLUME /tmp
