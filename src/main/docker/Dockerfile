@@ -16,14 +16,15 @@
 
 
 # Define working directory.
-W#ORKDIR /data
+#WORKDIR /data
 
 # Define commonly used JAVA_HOME variable
 #ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-FROM java:8
+
 #EXPOSE 8080
 
 #install Spring Boot artifact
+FROM java:8
 VOLUME /tmp
 ADD /maven/SpringBoot-0.0.1-SNAPSHOT.jar SpringBoot.jar
 RUN bash -c 'touch /SpringBoot.jar'
