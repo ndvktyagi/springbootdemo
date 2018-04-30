@@ -18,7 +18,7 @@ import com.springbootdemo.entity.Student;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
 public class SpringBootServiceTest {
-
+/*
    @Autowired
     private SpringBootController controller;
 
@@ -52,5 +52,5 @@ public class SpringBootServiceTest {
 		assert(body).contains("Hello World");
 
 	}
-	
+	*/
 }
