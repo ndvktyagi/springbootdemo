@@ -52,5 +52,5 @@ public class SpringBootServiceTest {
 		assert(body).contains("Hello World");
 
 	}
-	*/
+	
 }
