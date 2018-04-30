@@ -27,10 +27,10 @@ public class SpringBootServiceTest {
     @Test
     public void getControllerCoverage()
             throws Exception {
-        String greeting = "Hello World";//this.controller.getHelloWorldMsg();
+        String greeting = this.controller.getHelloWorldMsg();
         System.out.println(greeting);
         assert(greeting).equals("Hello World");
-       // greeting = this.controller.getSpringBootMsg();
+        greeting = this.controller.getSpringBootMsg();
         System.out.println(greeting);
         assert(greeting).equals("Hello Spring Boot Demo 1");
 
@@ -44,11 +44,11 @@ public class SpringBootServiceTest {
 	@Test
 	public void exampleTest() {
 		restTemplate = restTemplate.withBasicAuth("admin", "secret");
-		String body = "Hello World";//this.restTemplate.getForObject("/SpringBoot/HelloWorld", String.class);
+		String body = this.restTemplate.getForObject("/SpringBoot/HelloWorld", String.class);
 		Student student = new Student();
 		student.setName("Testing Demo");
-		//ResponseEntity<Student> responseEntity = this.restTemplate.postForEntity("/SpringBoot/addStudent",student, Student.class);
-		//System.out.println(responseEntity.getBody().getName());
+		ResponseEntity<Student> responseEntity = this.restTemplate.postForEntity("/SpringBoot/addStudent",student, Student.class);
+		System.out.println(responseEntity.getBody().getName());
 		assert(body).contains("Hello World");
 
 	}
