@@ -158,8 +158,6 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-
 		<!-- JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
