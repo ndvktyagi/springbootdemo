@@ -17,7 +17,6 @@ public class Main extends SpringBootServletInitializer {
     }
 
 }
-
 /*@SpringBootApplication
 public class SpringBootWebApplication {
 
