@@ -1,1 +1,1 @@
-SELECT * From Student;
+/*SELECT * From Student;*/
