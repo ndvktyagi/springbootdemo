@@ -47,7 +47,7 @@ public class SpringBootServiceTest {
 		String body = this.restTemplate.getForObject("/SpringBoot/HelloWorld", String.class);
 		Student student = new Student();
 		student.setName("Amit Kumar");
-		student.setClassname("XYZ");
+		student.setClassname("HCL Technologies Ltd.");
 		ResponseEntity<Student> responseEntity = this.restTemplate.postForEntity("/SpringBoot/addStudent",student, Student.class);
 		System.out.println(responseEntity.getBody().getName());
 		assert(body).contains("Hello World");
