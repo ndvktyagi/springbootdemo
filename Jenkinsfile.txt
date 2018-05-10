@@ -6,8 +6,12 @@ node {
         stage ('Clone') {
         	checkout scm
         }
+	stage ('SonarCube') {
+        	 "echo 'shell scripts to build project...'"
+        }
+	
         stage ('Build') {
-        	  sh "mvn clean install"
+        	 mvn clean install
 		 "echo 'shell scripts to build project...'"
         }
         stage ('Tests') {
@@ -21,6 +25,9 @@ node {
 	             "echo 'shell scripts to run integration tests...'"
 	        }
         }
+	stage ('Code Coverage') {
+             "echo 'shell scripts to deploy to server...'"
+      	}
       	stage ('Deploy') {
              "echo 'shell scripts to deploy to server...'"
       	}
