@@ -1,6 +1,6 @@
 node {
  	// Clean workspace before doing anything
-	// testing comments.
+	// testing comment.
     deleteDir()
 
     try {
